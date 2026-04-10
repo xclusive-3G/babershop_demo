@@ -9,6 +9,7 @@ import { FormInput, FormTextarea } from "../components/FormFields";
 import Toast from "../components/Toast";
 import { useToast } from "../hooks/useToast";
 import SectionLabel from "../components/SectionLabel";
+<<<<<<< HEAD
 // import { submitBooking } from "../services/api";
 import supabase from "../config/supaClient";
 
@@ -32,6 +33,9 @@ const submitBooking = async (bookingData) => {
   }
 
 };
+=======
+
+>>>>>>> 32b318d13d3d33367c1ff801e72061b14b65e7e5
 
 const fmtDate = (d) => {
   if (!d) return "";
@@ -129,7 +133,11 @@ function Step2({ form, set, onNext, onBack }) {
             key={s.num}
             service={s}
             selected={form.service === s.title}
+<<<<<<< HEAD
             onClick={() => set("service", s.title ) }
+=======
+            onClick={() => set("service", s.title)}
+>>>>>>> 32b318d13d3d33367c1ff801e72061b14b65e7e5
           />
         ))}
       </div>
@@ -521,8 +529,11 @@ function Step3({ form, set, onNext, onBack }) {
                 dateStr={form.date}
                 selectedTime={form.time}
                 onSelect={(t) => set("time", t)}
+<<<<<<< HEAD
                 barber={form.barber !== "No Preference" ? form.barber : undefined}
                 duration={SERVICES.find((s) => s.title === form.service)?.durationMinutes || 30}
+=======
+>>>>>>> 32b318d13d3d33367c1ff801e72061b14b65e7e5
               />
             </div>
 
@@ -813,7 +824,11 @@ export default function BookPage({ setPage }) {
   const [confirmed, setConfirmed] = useState(false);
   const [form, setForm] = useState({
     fn: "", ln: "", phone: "", email: "", notes: "",
+<<<<<<< HEAD
     service: "", date: "",price: "", time: "", barber: "No Preference",
+=======
+    service: "", date: "", time: "", barber: "No Preference",
+>>>>>>> 32b318d13d3d33367c1ff801e72061b14b65e7e5
   });
   const { toast, showToast } = useToast();
 
@@ -849,9 +864,12 @@ export default function BookPage({ setPage }) {
     setConfirmed(true);
     showToast("✅  Appointment confirmed!", "success");
     window.scrollTo({ top: 0 });
+<<<<<<< HEAD
     // console log would be replaced by actual API call in production
     console.log("Booking details:", form);
     submitBooking(form);
+=======
+>>>>>>> 32b318d13d3d33367c1ff801e72061b14b65e7e5
   };
 
   const handleReset = () => {

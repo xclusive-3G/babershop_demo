@@ -142,4 +142,7 @@
 .animate-fade-up-2 { animation: fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.3s both; }
 .animate-fade-up-3 { animation: fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.45s both; }
 .animate-pulse-red { animation: pulseRed 2s infinite; }
+<<<<<<< HEAD
 @keyframes spin { to { transform: rotate(360deg); } }
+=======
+>>>>>>> 32b318d13d3d33367c1ff801e72061b14b65e7e5
